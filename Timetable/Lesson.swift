@@ -9,17 +9,22 @@
 import Foundation
 
 class Lesson {
-    
+    let name: String
     let onTimetable: Int
     let time: (h: Int, m:Int)
     let duration: Duration
     let weekday: Weekday
+    let teacher: String
+    let room: String
     
-    init(let onTimetable: Int, let time: (h:Int, m:Int), let duration: Duration, let weekday: Weekday){
+    init(let name: String, let onTimetable: Int, let time: (h:Int, m:Int), let duration: Duration, let weekday: Weekday, let teacher: String, let room: String){
+        self.name = name
         self.onTimetable = onTimetable
         self.time = time
         self.duration = duration
         self.weekday = weekday
+        self.teacher = teacher
+        self.room = room
     }
     
     struct Duration {
